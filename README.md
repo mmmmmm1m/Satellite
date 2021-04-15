@@ -6,3 +6,4 @@ This can be used for any planet because the user can input a custom mass for the
 This program is assuming that the satellite is moving outside the atmosphere.
 When the user selects Earth, there is a chance that the program might be slightly inacurrate with certain satellite trajectories because
 the program uses the radius of Earth at the equator.
+It can also find the apoapsis and periapsis of a satellite with an elliptical orbit.
