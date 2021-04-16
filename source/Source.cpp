@@ -243,5 +243,6 @@ int main()
 
 		cout << "\nInvalid input, try again\n";
 	}
+	Sleep(10000);
 	// Program is done calculating either distance or velocity of satellite
 }
