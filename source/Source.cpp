@@ -124,7 +124,6 @@ int main()
 					cin >> _satellite.semiminoraxis;
 
 					_satellite.GetEccentricity();
-					cout << _satellite.eccentricity << endl;
 					_satellite.GetEllipticalDistances();
 
 					cout << "\nThe periapsis of the satellite is " << _satellite.periapsisdist << " meters away from the planet, and the apoapsis is " << _satellite.apoapsisdist << " meters away\n";
