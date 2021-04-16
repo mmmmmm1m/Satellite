@@ -19,20 +19,23 @@ void satellite::GetFloat(std::string parameter, bool distance)
 
 	for (int i = 0; i < parameter.length(); i++)
 	{
-		if (parameter[i] != 'e' && firsthalf == true)
+		if (parameter[i] == 'e')
+		{
+			firsthalf = false;
+			continue;
+		}
+
+		if (firsthalf == true)
 		{
 			number += parameter[i];
 		}
 
-		if (parameter[i] != 'e' && firsthalf == false)
+		if (firsthalf == false)
 		{
 			exponent += parameter[i];
 		}
 		
-		else
-		{
-			firsthalf = false; 
-		}
+
 	}
 
 	if (distance == true)
