@@ -6,6 +6,7 @@ void planet::CalculateMass()
 	double volume = (4 / 3) * M_PI * (planet::radius * planet::radius * planet::radius);
 	double mass = planet::density * volume;
 	planet::mass = mass;
+	std::cout << planet::mass << std::endl;
 }
 
 void planet::CalculateRotation(std::string time)
@@ -59,20 +60,23 @@ void planet::GetFloat(std::string parameter, bool mass)
 
 	for (int i = 0; i < parameter.length(); i++)
 	{
-		if (parameter[i] != 'e' && firsthalf == true)
+		if (parameter[i] == 'e')
+		{
+			firsthalf = false;
+			continue;
+		}
+
+		if (firsthalf == true)
 		{
 			number += parameter[i];
 		}
 
-		if (parameter[i] != 'e' && firsthalf == false)
+		if (firsthalf == false)
 		{
 			exponent += parameter[i];
 		}
 
-		if (parameter[i] == 'e')
-		{
-			firsthalf = false;
-		}
+
 	}
 
 	if (mass == true)
